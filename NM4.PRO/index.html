@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon del sistema -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Título profesional -->
+    <title>CyberSec Dashboard - Monitoreo de Servidores</title>
+
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Contenedor principal del Dashboard */
+        .dashboard {
+            max-width: 1000px;
+            margin: auto;
+            background-color: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,255,255,0.2);
+        }
+
+        h1, h2 {
+            color: #38bdf8;
+        }
+
+        /* Tabla de servidores */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+        }
+
+        th, td {
+            border: 1px solid #334155;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0ea5e9;
+            color: white;
+        }
+
+        .online {
+            color: #22c55e;
+            font-weight: bold;
+        }
+
+        .offline {
+            color: #ef4444;
+            font-weight: bold;
+        }
+
+        /* Servidor critico */
+        mark {
+            background-color: #ff0000;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        /* Lista de alertas */
+        ul {
+            background-color: #111827;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Boton de reinicio */
+        .btn-restart {
+            background-color: #dc2626;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .btn-restart:hover {
+            background-color: #b91c1c;
+        }
+
+        /* Politica de seguridad */
+        blockquote {
+            border-left: 4px solid #38bdf8;
+            padding-left: 15px;
+            margin-top: 25px;
+            font-style: italic;
+            color: #cbd5e1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor principal del Dashboard -->
+    <div class="dashboard">
+
+        <h1>Dashboard de Monitoreo de Servidores</h1>
+
+        <!-- Tabla de estado de servidores -->
+        <table>
+            <thead>
+                <tr>
+                    <th>IP</th>
+                    <th>Nombre</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>192.168.1.10</td>
+                    <td>WEB-SRV-01</td>
+                    <td class="online">Online</td>
+                </tr>
+                <tr>
+                    <td>192.168.1.20</td>
+                    <td><mark>DB-SRV-01</mark></td>
+                    <td class="offline">Offline</td>
+                </tr>
+                <tr>
+                    <td>192.168.1.30</td>
+                    <td>MAIL-SRV-01</td>
+                    <td class="online">Online</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Lista de alertas recientes -->
+        <h2>Alertas Recientes</h2>
+        <ul>
+            <li>⚠ Servidor DB-SRV-01 sin respuesta.</li>
+            <li>⚠ Intento de acceso no autorizado detectado.</li>
+            <li>✔ Backup completado correctamente.</li>
+        </ul>
+
+        <!-- Boton de accion -->
+        <br>
+        <button class="btn-restart">
+            Reiniciar Servidor
+        </button>
+
+        <!-- Polític de seguridad -->
+        <blockquote>
+            "Todo acceso a la infraestructura debe ser monitoreado y registrado para garantizar la integridad, confidencialidad y disponibilidad de los sistemas."
+        </blockquote>
+
+    </div>
+
+</body>
+</html>
